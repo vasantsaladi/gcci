@@ -1,7 +1,7 @@
 import streamlit as st
 from datetime import datetime
 from utils.layout import setup_page
-from utils.sheets import save_submission_sheets
+from data.partnership_interests import PartnershipInterests
 
 def main():
     setup_page("Submit Partnership - York College")
@@ -31,14 +31,7 @@ def main():
     with col2:
         org_type = st.selectbox(
             "Type*", 
-            [
-                "YCP Faculty/Staff",
-                "YCP Student",
-                "Business",
-                "Educational Institution",
-                "Community Organization",
-                "Government Agency"
-            ]
+            PartnershipInterests.ORGANIZATION_TYPES
         )
         phone = st.text_input("Phone Number")
 
@@ -48,14 +41,7 @@ def main():
     
     partnership_type = st.selectbox(
         "Type of Partnership*", 
-        [
-            "Academic Program",
-            "Research Collaboration",
-            "Student Opportunities",
-            "Community Impact",
-            "Resource Sharing",
-            "Technology/Innovation"
-        ]
+        PartnershipInterests.PARTNERSHIP_TYPES
     )
 
     goals = st.text_area(
@@ -65,12 +51,7 @@ def main():
     
     timeline = st.selectbox(
         "When would you like to start?", 
-        [
-            "Immediate",
-            "Next 3-6 months",
-            "6-12 months",
-            "Future planning"
-        ]
+        PartnershipInterests.TIMELINES
     )
 
     # Additional Information
@@ -84,25 +65,14 @@ def main():
         if not all([organization, contact_name, email, goals]):
             st.error("Please fill in all required fields marked with *")
         else:
-            submission_data = {
-                "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                "organization": organization,
-                "org_type": org_type,
-                "contact_name": contact_name,
-                "email": email,
-                "phone": phone,
-                "partnership_type": partnership_type,
-                "goals": goals,
-                "timeline": timeline,
-                "resources": resources if 'resources' in locals() else "",
-                "expectations": expectations if 'expectations' in locals() else ""
-            }
+            # Display success message without saving
+            st.success("""
+            Thank you for your interest in partnering with York College! 
             
-            if save_submission_sheets(submission_data):
-                st.success("Thank you for your submission! We will contact you soon.")
-                st.balloons()
-            else:
-                st.error("There was an error saving your submission. Please try again or contact support.")
+            This is currently a demonstration form. When the system is fully implemented, 
+            your submission will be processed and stored securely.
+            """)
+            st.balloons()
 
     # Help section
     with st.expander("Need Help?"):
