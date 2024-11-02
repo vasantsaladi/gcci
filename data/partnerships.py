@@ -201,6 +201,22 @@ PARTNERSHIPS = {
         }
     },
     "industry": {
+        "jf_taylor": {
+            "name": "JF Taylor Engineering Partnership",
+            "type": "Engineering & Technology",
+            "status": "Active",
+            "programs": [
+                "Software development",
+                "Systems engineering",
+                "Defense technology"
+            ],
+            "focus_areas": [
+                "Military simulation",
+                "Training systems",
+                "Software solutions"
+            ],
+            "sponsor_type": "GCCI Hackathon Sponsor"
+        },
         "dataforma": {
             "name": "Dataforma Software Training Partnership", 
             "type": "Technology Training",
@@ -211,12 +227,8 @@ PARTNERSHIPS = {
                 "Mentorship opportunities",
                 "Industry networking"
             ],
+            "sponsor_type": "GCCI Hackathon Sponsor",
             "contacts": {
-                "ycp": {
-                    "name": "Dr. Mohammed Raja",
-                    "title": "Chair",
-                    "department": "Operations and Information Technology"
-                },
                 "partner": {
                     "name": "Daryl Maronic",
                     "title": "President",
@@ -230,6 +242,7 @@ PARTNERSHIPS = {
             "start_date": "2023-06",
             "location": "Knowledge Park",
             "status": "Active",
+            "sponsor_type": "GCCI Hackathon Sponsor",
             "programs": [
                 "Senior design projects",
                 "Summer internships",
@@ -239,14 +252,55 @@ PARTNERSHIPS = {
                 "Smart building technology",
                 "Sustainability",
                 "IoT applications"
+            ]
+        },
+        "mrg_laboratories": {
+            "name": "MRG Laboratories Research Partnership",
+            "type": "Research & Development",
+            "status": "Active",
+            "sponsor_type": "GCCI Hackathon Sponsor",
+            "programs": [
+                "Materials testing",
+                "Quality control",
+                "Laboratory research"
             ],
-            "contacts": {
-                "ycp": {
-                    "name": "Dr. Stephen Kuchnicki",
-                    "title": "Engineering Department Chair",
-                    "email": "skuchnicki@ycp.edu"
-                }
-            }
+            "focus_areas": [
+                "Material science",
+                "Chemical analysis",
+                "Quality assurance"
+            ]
+        },
+        "cs_davidson": {
+            "name": "C.S. Davidson Engineering Partnership",
+            "type": "Civil Engineering",
+            "status": "Active",
+            "sponsor_type": "GCCI Hackathon Sponsor",
+            "programs": [
+                "Civil engineering projects",
+                "Infrastructure design",
+                "Environmental planning"
+            ],
+            "focus_areas": [
+                "Infrastructure development",
+                "Municipal engineering",
+                "Environmental solutions"
+            ]
+        },
+        "mlh": {
+            "name": "Major League Hacking Partnership",
+            "type": "Technology Competition",
+            "status": "Active",
+            "sponsor_type": "GCCI Hackathon Sponsor",
+            "programs": [
+                "40-hour hackathon",
+                "Tech workshops",
+                "Industry networking"
+            ],
+            "focus_areas": [
+                "Software Development",
+                "Innovation",
+                "Problem Solving"
+            ]
         },
         "hp_inc": {
             "name": "HP Inc. Global Entrepreneurship Program",
@@ -266,21 +320,6 @@ PARTNERSHIPS = {
                     "email": "ndelener@ycp.edu"
                 }
             }
-        },
-        "mlh_hackathon": {
-            "name": "Major League Hacking Partnership",
-            "type": "Technology Competition",
-            "status": "Active",
-            "programs": [
-                "40-hour hackathon",
-                "Tech workshops",
-                "Industry networking"
-            ],
-            "focus_areas": [
-                "Software Development",
-                "Innovation",
-                "Problem Solving"
-            ]
         },
         "harley_davidson": {
             "name": "Harley-Davidson Engineering Innovation",
